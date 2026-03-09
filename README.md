@@ -8,3 +8,6 @@ Key Features
 Interactive Deep-Zoom Map: Integrated with Leaflet. The map dynamically flies and zooms from a national view to specific cities, transitioning smoothly from a state view to a deep zoom on specific urban centers like Raipur, Durg, or Bhilai.
 
 7-Day Trend Simulation: Visualizes simulated past and predicted AQI trends using responsive line charts.
+Actionable Insights: Categorizes threat levels and provides dynamic (simulated) Health Advisories and Mitigation Steps based on the generated score.
+
+Hyper-Local Granularity: Supports drilling down from State to District to specific Localities/Areas.
