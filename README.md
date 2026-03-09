@@ -11,3 +11,23 @@ Interactive Deep-Zoom Map: Integrated with Leaflet. The map dynamically flies an
 Actionable Insights: Categorizes threat levels and provides dynamic (simulated) Health Advisories and Mitigation Steps based on the generated score.
 
 Hyper-Local Granularity: Supports drilling down from State to District to specific Localities/Areas.
+
+How to Run Locally
+Follow these steps to set up the project on your local machine:
+
+Clone the repository:
+
+Bash
+git clone https://github.com/yourusername/aqi-predictor.git
+Navigate to the project directory:
+
+Bash
+cd aqi-predictor
+Install dependencies:
+
+Bash
+npm install --legacy-peer-deps
+Start the development server:
+
+Bash
+npm run dev
