@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { AlertTriangle, Wind, Activity, ShieldAlert, CheckCircle2 } from 'lucide-react';
+import { Wind, Activity, ShieldAlert, CheckCircle2 } from 'lucide-react';
 
 const ReportDashboard = ({ data, onClose }) => {
   const getAqiColor = (aqi) => {
@@ -65,12 +65,22 @@ const ReportDashboard = ({ data, onClose }) => {
 
         <div className="chart-container">
           <h3>7-Day AQI Trend Prediction</h3>
-          <div className="chart-wrapper">
-            <ResponsiveContainer width="100%" height="100%">
-              <LineChart data={data.trend}>
+          <div className="chart-wrapper" style={{ width: '100%', height: '220px' }}>
+            {/* Added debounce to ensure it recalculates after animation */}
+            <ResponsiveContainer width="100%" height="100%" debounce={100}>
+              <LineChart data={data.trend} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#eee" />
-                <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: '#666' }} />
-                <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: '#666' }} />
+                <XAxis 
+                  dataKey="name" 
+                  axisLine={false} 
+                  tickLine={false} 
+                  tick={{ fontSize: 12, fill: '#666' }} 
+                />
+                <YAxis 
+                  axisLine={false} 
+                  tickLine={false} 
+                  tick={{ fontSize: 12, fill: '#666' }} 
+                />
                 <Tooltip 
                   contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}
                 />
@@ -81,6 +91,7 @@ const ReportDashboard = ({ data, onClose }) => {
                   strokeWidth={3} 
                   dot={{ r: 4, fill: '#3b82f6', strokeWidth: 2, stroke: '#fff' }} 
                   activeDot={{ r: 6 }} 
+                  animationDuration={1500}
                 />
               </LineChart>
             </ResponsiveContainer>
