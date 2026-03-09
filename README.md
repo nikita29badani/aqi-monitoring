@@ -3,3 +3,8 @@ AirSense is an interactive dashboard designed to monitor and predict the Air Qua
 
 Important Disclaimer
 This application is currently a Proof of Concept (PoC). All air quality data, including AQI levels, health advisories, and trend graphs, are randomly generated for demonstration purposes. This project does not use live sensor data or real-time APIs at this stage. It is designed to showcase the potential user interface and system architecture for a future real-world implementation.
+
+Key Features
+Interactive Deep-Zoom Map: Integrated with Leaflet. The map dynamically flies and zooms from a national view to specific cities, transitioning smoothly from a state view to a deep zoom on specific urban centers like Raipur, Durg, or Bhilai.
+
+7-Day Trend Simulation: Visualizes simulated past and predicted AQI trends using responsive line charts.
